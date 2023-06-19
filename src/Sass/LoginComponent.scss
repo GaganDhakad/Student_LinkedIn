@@ -3,7 +3,11 @@ body {
     padding: 0;
   }
 .login-wrapper {
-    background-color: white !important;
+    background-image: url("../assets/pexels-veeterzy-303383.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 1;
     height: 100vh;
     .login-wrapper-inner {
       display: flex;
@@ -47,7 +51,6 @@ body {
     width: 300px;
 }
 .header-container{
-  background-color: white !important;
 	font-size: 1.5rem;
 	display: flex;
 	align-items: center;
