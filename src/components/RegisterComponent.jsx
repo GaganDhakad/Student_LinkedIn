@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RegisterAPI } from "../api/AuthAPI";
 import { postUserData } from "../api/FirestoreAPI";
-import {FaLinkedin} from 'react-icons/fa'
+import {MdSchool} from 'react-icons/md';
 import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/LoginComponent.scss";
@@ -35,9 +35,9 @@ export default function RegisterComponent() {
     <div className="login-wrapper">
       <div className='header-container'>
         <p>
-          <strong>Student Linked</strong>
+          <strong>Student LinkedIn</strong>
         </p>
-        <FaLinkedin className='header-icon'/>
+        <MdSchool className='header-icon' color="rgb(0, 153, 255)"/>
       </div>
     <div className="login-wrapper-inner">
     <h1 className="heading">Make the most of your professional life</h1>

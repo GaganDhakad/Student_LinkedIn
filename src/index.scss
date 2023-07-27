@@ -5,7 +5,11 @@
   line-height: 1.5;
   font-weight: 400;
   color: #212121;
-  background-color: rgba(224, 224, 224);
+  /*background-color: rgba(224, 224, 224);*/
+  background-image: url("./assets/pexels-johannes-plenio-1103970.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .common-input {

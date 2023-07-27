@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LinkedinLogo from "../../../assets/linkedinLogo.svg";
-import user from "../../../assets/user.svg";
+import {MdSchool} from 'react-icons/md';
 import SearchUsers from "../SearchUsers";
 import {
   AiOutlineHome,
@@ -65,7 +64,7 @@ export default function Topbar({ currentUser }) {
     getAllUsers(setUsers);
   }, []);
   return (
-    <div className="topbar-main">
+    <div className="topbar">
       {popupVisible ? (
         <div className="popup-position">
           <ProfilePopup />
@@ -74,7 +73,7 @@ export default function Topbar({ currentUser }) {
         <></>
       )}
 
-    <img className="linkedin-logo" src={LinkedinLogo} alt="LinkedinLogo" />
+    <MdSchool className='header-icon' color="rgb(0, 153, 255)" size={40}/>
       {isSearch ? (
         <SearchUsers
           setIsSearch={setIsSearch}
@@ -97,7 +96,9 @@ export default function Topbar({ currentUser }) {
             className="react-icon"
             onClick={() => goToRoute("/connections")}
           />
-          <AiOutlineMessage size={30} className="react-icon" />
+          <AiOutlineMessage size={30} className="react-icon" 
+            onClick={() => goToRoute("/Article")}
+          />
           <AiOutlineBell size={30} className="react-icon" />
         </div>
       )}

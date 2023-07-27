@@ -20,7 +20,7 @@ export default function ProfileEdit({ onEdit, currentUser }) {
   };
 
   return (
-    <div className="profile-card">
+    <div className="profile-edit-card">
       <div className="edit-btn">
         <AiOutlineClose className="close-icon" onClick={onEdit} size={25} />
       </div>
@@ -38,48 +38,49 @@ export default function ProfileEdit({ onEdit, currentUser }) {
          onChange={getInput}
          id="filled-basic" 
          label="Name" 
-         variant="filled"
+         variant="outlined"
          name="name"
          value={editInputs.name} />
          <TextField 
          onChange={getInput}
          id="filled-basic" 
          label="Headline" 
-         variant="filled"
+         variant="outlined"
          value={editInputs.headline}
          name="headline" /> 
-         <CountrySelect
+         <TextField
          onChange={getInput}
-         name="country"
+         id="filled-basic" 
+         label="Country"
          value={editInputs.country}
-         variant="filled"
+         variant="outlined"
          />
          <TextField 
          onChange={getInput}
          id="filled-basic" 
          label="City" 
-         variant="filled"
+         variant="outlined"
          name="city"
          value={editInputs.city} />
          <TextField 
          onChange={getInput}
          id="filled-basic" 
          label="Education Board" 
-         variant="filled"
+         variant="outlined"
          name="EducationBoard"
          value={editInputs.EducationBoard} />
          <TextField 
          onChange={getInput}
          id="filled-basic" 
          label="School" 
-         variant="filled"
+         variant="outlined"
          name="school"
          value={editInputs.school} />
          <TextField 
          onChange={getInput}
          id="filled-basic" 
          label="Website" 
-         variant="filled"
+         variant="outlined"
          name="website"
          value={editInputs.website} />
          <TextField
@@ -88,7 +89,7 @@ export default function ProfileEdit({ onEdit, currentUser }) {
           multiline
           rows={5}
           defaultValue="About Me"
-          variant="filled"
+          variant="outlined"
           onChange={getInput}
           name="aboutMe"
           value={editInputs.aboutMe}
@@ -97,14 +98,14 @@ export default function ProfileEdit({ onEdit, currentUser }) {
          onChange={getInput}
          id="filled-basic" 
          label="Skills" 
-         variant="filled"
+         variant="outlined"
          name="skills"
          value={editInputs.skills} />
         </Box>
         <Box>
         <div className="save-container">
         <Button
-        variant="contained"
+        variant="outlined"
         className="save-btn" 
         onClick={updateProfileData}
         >Submit</Button>

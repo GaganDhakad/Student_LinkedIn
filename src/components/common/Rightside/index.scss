@@ -1,20 +1,24 @@
 .Container{
   grid-area: rightside;
-  margin-top: 32px;
+  margin-top: 60px;
 }
 
 .FollowCard{ 
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
-  background-color: #fff;
+  /*background-color: rgb(122 162 179);*/
+  background-color: whitesmoke;
   border-radius: 5px;
   position: relative;
   border: none;
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
+  
   padding: 12px;
 }
-
+.FollowCard:hover{
+  box-shadow: rgb(30, 0, 255) 3px 3px 5px;
+  
+}
 
 .Title {
   display: inline-flex;
@@ -81,14 +85,18 @@
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
-  background-color: #fff;
+  /*background-color:rgb(122 162 179);*/
+  background-color: whitesmoke;
   border-radius: 5px;
   position: relative;
   border: none;
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
   padding: 12px;
   img {
     width: 100%;
     height: 100%;
   }
+}
+.BannerCard:hover{
+  box-shadow: rgb(30, 0, 255) 3px 3px 5px;
+
 }

@@ -16,7 +16,7 @@ const [currentUser, setCurrentUser] = useState({});
     <div>
         <Topbar currentUser={currentUser} />
         <Container>
-          <Leftside/>
+          <Leftside currentUser={currentUser}/>
           <Home currentUser={currentUser}/>
           <Rightside/>
         </Container>
@@ -26,9 +26,9 @@ const [currentUser, setCurrentUser] = useState({});
 const Container = styled.div`
   display: grid;
   grid-template-areas: "leftside main rightside";
-  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
-  column-gap: 25px;
-  row-gap: 25px;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 12fr) minmax(300px, 7fr);
+  column-gap: 15px;
+  row-gap: 15px;
   margin: 25px 0;
   @media (max-width: 768px) {
     display: flex;

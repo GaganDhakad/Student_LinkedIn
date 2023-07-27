@@ -1,13 +1,14 @@
 .posts-card {
     width: 550px;
     min-height: auto;
-    background-color: whitesmoke;
+    background-color:rgb(122 162 179);
     margin-top: 30px;
     border: 1px solid #b7b7b7;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
+    
     .post-image-wrapper {
       display: flex;
       padding: 15px;
@@ -53,6 +54,9 @@
       color: rgba(0, 0, 0, 0.9);
     }
   }
+  .posts-card:hover{
+    box-shadow: rgb(30, 0, 255) 3px 3px 5px;
+  }
   
   .action-container {
     position: absolute;
@@ -67,7 +71,7 @@
   
     .action-icon:hover {
       color: #000000;
-      background-color: #b7b7b7;
+      background-color: whitesmoke;
       padding: 10px;
       border-radius: 50%;
     }

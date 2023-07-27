@@ -1,8 +1,9 @@
 import React from 'react'
 import "./index.scss";
+import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-export default function Leftside() {
+export default function Leftside({ currentUser }) {
   let navigate = useNavigate();
   const goToRoute = (route) => {
     navigate(route);
@@ -14,12 +15,17 @@ export default function Leftside() {
           <div className='UserInfo'>
             <div className='CardBackground' />
             <a>
-              < div className='Photo' />
-              <p className='Link'>Welcome, there !</p>
+            <Photo>
+              <img
+              src={currentUser?.imageLink}
+              alt="user" 
+              onClick={() => goToRoute("/profile")}
+              style={{cursor:'pointer'}}
+              />
+            </Photo>
+              <p className='Name'>{currentUser.name}</p>
             </a>
-            <a>
-              <div className='AddPhotoText'>Add a photo</div>
-            </a>
+              <div className='About'>Student at {currentUser.school} </div>
           </div>
           <div className='Widget'>
             <a>
@@ -29,6 +35,7 @@ export default function Leftside() {
               </div>
               <img src="/images/widget-icon.svg" alt="" 
                   onClick={() => goToRoute("/connections")}
+                  style={{cursor:'pointer'}}
               />
             </a>
           </div>
@@ -60,3 +67,17 @@ export default function Leftside() {
     </div>
   )
 }
+const Photo = styled.div`
+box-shadow: none;
+  box-sizing: border-box;
+  background-clip: content-box;
+  background-color: whitesmoke;
+  background-position: center;
+  background-size: 60%;
+  img{
+    height: 60px;
+    width: 60px;
+    margin: -38px auto 12px;
+    border-radius: 50%;
+  }
+`;

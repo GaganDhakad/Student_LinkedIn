@@ -4,6 +4,8 @@ import Register from "../Pages/Register";
 import HomeLayout from "../layouts/HomeLayout";
 import ProfileLayout from "../layouts/ProfileLayout";
 import ConnectionLayout from "../layouts/ConnectionLayout";
+import Article from "../Pages/Article";
+import ArticleLayout from "../layouts/ArticleLayout";
 
 export const router = createBrowserRouter([
   {
@@ -25,5 +27,9 @@ export const router = createBrowserRouter([
   {
     path: "/connections",
     element: <ConnectionLayout />,
+  },
+  {
+    path: "/Article",
+    element: <ArticleLayout />,
   },
 ]);

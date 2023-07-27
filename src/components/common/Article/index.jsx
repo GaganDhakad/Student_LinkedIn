@@ -1,19 +1,16 @@
 import React, { useState, useMemo } from "react";
 import { postStatus, getStatus, updatePost } from "../../../api/FirestoreAPI";
 import { getCurrentTimeStamp } from "../../../helpers/useMoment";
-import ModalComponent from "../Modal";
-import { uploadPostImage } from "../../../api/ImageUpload";
+import ArticleComponent from "./WriteArticle";
 import { getUniqueID } from "../../../helpers/getUniqueId";
-import PostsCard from "../PostsCard";
 import "./index.scss";
 
-export default function PostStatus({ currentUser }) {
+export default function Article({ currentUser }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [status, setStatus] = useState("");
   const [allStatuses, setAllStatus] = useState([]);
   const [currentPost, setCurrentPost] = useState({});
   const [isEdit, setIsEdit] = useState(false);
-  const [postImage, setPostImage] = useState("");
 
   const sendStatus = async () => {
     let object = {
@@ -23,7 +20,6 @@ export default function PostStatus({ currentUser }) {
       userName: currentUser.name,
       postID: getUniqueID(),
       userID: currentUser.id,
-      postImage: postImage,
     };
     await postStatus(object);
     await setModalOpen(false);
@@ -50,12 +46,6 @@ export default function PostStatus({ currentUser }) {
   return (
     <div className="post-status-main">
       <div className="post-status">
-        <img
-          className="post-image"
-          src={currentUser?.imageLink}
-          alt="imageLink"
-          style={{cursor:'pointer'}}
-        />
         <button
           className="open-post-modal"
           onClick={() => {
@@ -63,11 +53,11 @@ export default function PostStatus({ currentUser }) {
             setIsEdit(false);
           }}
         >
-          Start a Post
+        Write Article
         </button>
       </div>
 
-      <ModalComponent
+      <ArticleComponent
         setStatus={setStatus}
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
@@ -75,18 +65,12 @@ export default function PostStatus({ currentUser }) {
         sendStatus={sendStatus}
         isEdit={isEdit}
         updateStatus={updateStatus}
-        uploadPostImage={uploadPostImage}
-        postImage={postImage}
-        setPostImage={setPostImage}
-        setCurrentPost={setCurrentPost}
-        currentPost={currentPost}
       />
 
       <div>
         {allStatuses.map((posts) => {
           return (
             <div key={posts.id}>
-              <PostsCard posts={posts} getEditData={getEditData} />
             </div>
           );
         })}

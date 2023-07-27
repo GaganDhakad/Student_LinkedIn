@@ -1,11 +1,14 @@
 .profile-card {
-  width: auto;
+  width: 70%;
+  left: 9%;
   height: auto;
+  /*background-color: rgb(122 162 179);*/
   background-color: whitesmoke;
-  margin: 30px;
+  margin: 100px 30px 30px 30px;
   border-radius: 5px;
-  padding: 20px;
+  padding: 20px 20px;
   position: relative;
+  
   .profile-info {
     display: flex;
     justify-content: space-between;
@@ -74,5 +77,15 @@
     color: rgba(0, 0, 0, 0.9);
     width: 320px;
     line-height: 20px;
+  }
+}
+.profile-card:hover{
+   box-shadow: rgb(30, 0, 255) 3px 3px 5px;
+}
+@media only screen and (max-width: 414px){
+  .profile-card{
+    width: auto;
+    height: auto;
+    left: auto;
   }
 }

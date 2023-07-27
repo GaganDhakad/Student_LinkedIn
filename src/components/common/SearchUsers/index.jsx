@@ -9,7 +9,6 @@ export default function SearchUsers({ setIsSearch, setSearchInput }) {
         placeholder="Search Users.."
         onChange={(event) => setSearchInput(event.target.value)}
       />
-
       <AiOutlineCloseCircle
         className="close-icon"
         size={20}

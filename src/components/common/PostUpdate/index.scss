@@ -1,4 +1,5 @@
 .post-status-main {
+  padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +8,7 @@
     .user-details {
       width: 550px;
       height: auto;
-      background-color: whitesmoke;
+      background-color:rgb(122 162 179);
       margin-top: 100px;
       border: 1px solid #b7b7b7;
       border-radius: 7px;
@@ -37,13 +38,14 @@
     .post-status {
       width: 550px;
       height: 120px;
-      background-color: whitesmoke;
-      margin-top: 30px;
+      background-color: rgb(122 162 179);
+      margin-top: 40px;
       border: 1px solid #b7b7b7;
       border-radius: 7px;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      
   
       .post-image {
         width: 60px;
@@ -69,7 +71,10 @@
       }
   
       .open-post-modal:hover {
-        background-color: #dcdbdb;
+        background-color: whitesmoke
       }
+    }
+    .post-status:hover{
+      box-shadow: rgb(30, 0, 255) 3px 3px 5px;
     }
   }

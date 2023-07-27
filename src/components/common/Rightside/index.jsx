@@ -17,7 +17,7 @@ export default function Rightside() {
               <div className='Avatar' />
             </a>
             <div>
-              <span>#Linkedin</span>
+              <span>#StudentLinkedin</span>
               <button>Follow</button>
             </div>
           </li>
@@ -39,7 +39,7 @@ export default function Rightside() {
       </div>
       <div className='BannerCard'>
         <img
-          src="https://static-exp1.licdn.com/scds/common/u/images/promo/ads/li_evergreen_jobs_ad_300x250_v1.jpg"
+          src="https://en.pimg.jp/015/816/118/1/15816118.jpg"
           alt=""
         />
       </div>

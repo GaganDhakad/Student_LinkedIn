@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LoginAPI } from "../api/AuthAPI";
-import {FaLinkedin} from 'react-icons/fa'
+import {MdSchool} from 'react-icons/md';
 import { useNavigate } from "react-router-dom";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
@@ -21,14 +21,14 @@ export default function LoginComponent() {
       toast.error("Please Check your Credentials");
     }
   };
-
+  
   return (
     <div className="login-wrapper">
       <div className='header-container'>
         <p>
-          <strong>Student Linked</strong>
+          <strong>Student LinkedIn</strong>
         </p>
-        <FaLinkedin className='header-icon'/>
+        <MdSchool className='header-icon' color="rgb(0, 153, 255)"/>
       </div>
       <div className="login-wrapper-inner">
       <h1 className="heading">Sign in</h1>

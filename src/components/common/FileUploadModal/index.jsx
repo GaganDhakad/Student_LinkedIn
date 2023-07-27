@@ -32,7 +32,7 @@ export default function FileUploadModal({
         <div className="image-upload-main">
           <p>{currentImage.name}</p>
           <label className="upload-btn" for="image-upload">
-            Add an Image
+            Add Image
           </label>
           {progress === 0 ? (
             <></>

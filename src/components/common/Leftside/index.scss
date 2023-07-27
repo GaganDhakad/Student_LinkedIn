@@ -1,17 +1,22 @@
 .container{
+  position: sticky;
     grid-area: leftside;
-    margin-top: 32px;
+    margin-top: 60px;
 }
 .ArtCard{
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
-  background-color: #fff;
+  /*background-color: rgb(122 162 179);*/
+  background-color: whitesmoke;
   border-radius: 5px;
   transition: box-shadow 83ms;
   position: relative;
   border: none;
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
+  
+}
+.ArtCard:hover{
+  box-shadow: rgb(30, 0, 255) 3px 3px 5px;
 }
 .UserInfo{
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -26,31 +31,15 @@
   height: 54px;
   margin: -12px -12px 0;
 }
-.Photo{
-  box-shadow: none;
-  background-image: url("/images/photo.svg");
-  width: 72px;
-  height: 72px;
-  box-sizing: border-box;
-  background-clip: content-box;
-  background-color: white;
-  background-position: center;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  border: 2px solid white;
-  margin: -38px auto 12px;
-  border-radius: 50%;
-}
-.Link{
-  font-size: 16px;
+.Name{
+  font-size: 20px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.9);
   font-weight: 600;
 }
-.AddPhotoText{
-  color: #0a66c2;
-  margin-top: 4px;
-  font-size: 12px;
+.About{
+  margin-top: -10px;
+  font-size: 16px;
   line-height: 1.33;
   font-weight: 400;
 }
@@ -110,12 +99,12 @@
     text-align: center;
     overflow: hidden;
     margin-bottom: 8px;
-    background-color: #fff;
+    /*background-color:rgb(122 162 179);*/
+    background-color: whitesmoke;
     border-radius: 5px;
     transition: box-shadow 83ms;
     position: relative;
     border: none;
-    box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
     padding: 8px 0 0;
     text-align: left;
     display: flex;
@@ -146,4 +135,7 @@
         }
       }
     }
+}
+.CommunityCard:hover{
+  box-shadow: rgb(30, 0, 255) 3px 3px 5px;
 }
